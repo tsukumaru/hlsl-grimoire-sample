@@ -58,7 +58,7 @@ SPSIn VSMain(SVSIn vsIn, uniform bool hasSkin)
     SPSIn psIn;
 
     psIn.pos = mul(mWorld, vsIn.pos);   // モデルの頂点をワールド座標系に変換
-    psIn.worldPos = vsIn.pos;
+    psIn.worldPos = psIn.pos;
     psIn.pos = mul(mView, psIn.pos);    // ワールド座標系からカメラ座標系に変換
     psIn.pos = mul(mProj, psIn.pos);    // カメラ座標系からスクリーン座標系に変換
 
